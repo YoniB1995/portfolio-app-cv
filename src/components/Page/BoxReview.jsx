@@ -1,21 +1,24 @@
-import React , {useState} from 'react'
+import React , {useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen  } from '@fortawesome/free-brands-svg-icons';
-import AboutMe from '../Features/AboutMe/AboutMe'
+import AboutMe from './AboutMe/AboutMe'
 import IconsMenu from '../Features/IconsMenu'
-import { UserProvider } from '../Features/Context/Context'
-import {LanguageProvider} from '../Features/Context/LanguageContext'
+import { UserProvider } from '../Context/Context'
+import {LanguageProvider} from '../Context/LanguageContext'
 import Resume from '../Features/Resume/Resume'
-import FirstPage from '../Features/FirstPage/FirstPage'
+import FirstPage from '../Page/FirstPage/FirstPage'
 import DevDetails from '../Features/DevDetails/DevDetails'
-import Contact from '../Features/Contact/Contact'
-import Projects from '../Features/Projects/Projects'
+import Contact from './Contact/Contact'
+import Projects from './Projects/Projects'
 import {Button} from '@material-ui/core'
 import DevDetailsHebrew from '../Features/DevDetails/DevDetailsHebrew'
 
+
+
 const Body = styled.div`
 flex-basis: 80%;
+
 height: 100vh;
 width: 100vw;
 display: flex;
@@ -155,10 +158,7 @@ button{
   width:50%;
 
 }
-  }
-
-  
-  
+}
 `
 const UserCardDetails = styled.div`
 transform: translateX(15%);
@@ -230,7 +230,6 @@ export default function BoxReview() {
     displayProjects:isTrue,
     changeUser : (value) => {setIsTrue(value)},
   }
-
   
     function changeToHebrew(){
         setHebrew({isTrue:true})
@@ -240,26 +239,25 @@ export default function BoxReview() {
         setHebrew({isTrue:false})
     }
 
-    const style={margin:"5px"}
+    const style ={color:"white"};
 
   return (
     <><UserProvider value={newTrue} >
       <LanguageProvider value={hebrew}>
     <Body>
-      <BlackBox>
+      <BlackBox className="animate__animated animate__zoomInUp">
       <UserCardDetails > 
       {newTrue.displayMain.displayMain===true&& <FirstPage/>  } 
       {newTrue.displayAboutMe.displayAboutMe === true&& <AboutMe/>} 
       {newTrue.displayResume.displayResume === true && <Resume/>}
       {newTrue.displayContact.displayContact === true && <Contact/>}
       {newTrue.displayProjects.displayProjects === true && <Projects/>}
-
 </UserCardDetails>
   </BlackBox>   
     </Body>
     <IconsMenu/>
-    <GreyBox>
-   <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"></ProfileImg>
+    <GreyBox className="animate__animated animate__zoomInUp">
+   <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"/>
    {hebrew.isTrue? <DevDetailsHebrew/> :<DevDetails/>}
    <div>{hebrew.isTrue? <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>עברית</Button> : <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>Hebrew</Button> }
         {hebrew.isTrue?<Button variant="contained" color="primary" onClick={changeToEnglish}> אנגלית</Button> : <Button variant="contained" color="primary" onClick={changeToEnglish}> English</Button>}</div> 

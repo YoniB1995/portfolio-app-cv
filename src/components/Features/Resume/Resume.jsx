@@ -2,11 +2,11 @@ import React , {useState,useContext} from 'react'
 import styled from 'styled-components'
 import {ProgressBar} from 'react-bootstrap'
 import RightResumePage from './RightResumePage'
-import LeftResumePage from './LeftResumePage'
-import LeftResumeHebrew from './LeftResumeHebrew'
+import LeftResumePage from './LeftSide/LeftResumePage'
+import LeftResumeHebrew from './LeftSide/LeftResumeHebrew'
 import Certificate from './Certificate'
 import CertificateHebrew from './CertificateHebrew'
-import { LanguageConsumer } from '../Context/LanguageContext';
+import { LanguageConsumer } from '../../Context/LanguageContext';
 
 const ResumePage = styled.div`
 height: 90vh;

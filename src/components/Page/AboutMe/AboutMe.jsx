@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import { LanguageConsumer } from '../Context/LanguageContext'; 
+import { LanguageConsumer } from '../../Context/LanguageContext'; 
 import AboutMeHebrew from './AboutMeHebrew';
 import AboutMeEnglish from './AboutMeEnglish';
 

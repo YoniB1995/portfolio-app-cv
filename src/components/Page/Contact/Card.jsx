@@ -2,7 +2,6 @@ import React from 'react'
 import {Button,Card} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub  } from '@fortawesome/free-brands-svg-icons';
-import {  } from '@fortawesome/free-solid-svg-icons'; 
 
 
 

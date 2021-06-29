@@ -1,7 +1,7 @@
 import React , {useContext} from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { LanguageConsumer } from '../Context/LanguageContext';
+import { LanguageConsumer } from '../../Context/LanguageContext';
 import { faEnvelope  } from 
 '@fortawesome/free-solid-svg-icons';
 

@@ -1,12 +1,10 @@
-import React , { Component } from 'react';
+import React  from 'react';
 import styled from 'styled-components'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Stages from './Stages'
-import {  } from '@fortawesome/free-brands-svg-icons';
+import Stages from '../Stages'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {  faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -39,14 +37,10 @@ export default function LeftResumePage() {
             
             <Header> Resume <FontAwesomeIcon icon={faGraduationCap} color={colorBlue}></FontAwesomeIcon></Header>
             <CssBaseline />
-                
-                <Container maxWidth="sm">
-                    
-                    
+                <Container maxWidth="sm">  
                 </Container>
                 <Container maxWidth="sm">
-                    <Stages></Stages>
-                    
+                <Stages></Stages>
                 </Container>
                
                  

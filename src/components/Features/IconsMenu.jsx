@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome , faUser , faGraduationCap , faProjectDiagram ,faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {UserConsumer} from './Context/Context'
+import {UserConsumer} from '../Context/Context'
 
 
 const Navbar = styled.div`
@@ -149,12 +149,8 @@ export default function IconsMenu() {
         changeUser(showProjects)
     }
     
-
-    
-   
-    
     return (
-        <Navbar>
+        <Navbar className="animate__animated animate__zoomIn">
             
             <NavbarGif><FontAwesomeIcon icon={faHome} onClick={mainPage} color={colorOcean}/><DivTest class="tooltip">
             <span >Welcome</span>

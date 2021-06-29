@@ -2,8 +2,8 @@ import React , {useContext} from 'react'
 import styled from 'styled-components'
 import SkillNBar from '../RightSide/SkillNBar'
 import Knowledge from '../RightSide/Knowledge'
-import { LanguageProvider} from '../../Context/LanguageContext'
-
+import { LanguageProvider} from '../../../Context/LanguageContext'
+import {headerHebrew,skillsHebrew,codingSkillsHebrew,knowledgeListHebrew} from './TypoRightSide'
 
 const RightSide = styled.div`
 display: flex;
@@ -25,20 +25,15 @@ font-weight:800;
 
 `
 export default function RightResumePage() {
-    const header=["התמחות בעיצוב","התחמות בשפות תוכנה"];
-    const skills =["עיצוב אתרים","עיצוב לוגואים","ניסיון בעיצוב"]
-    const codingSkills =["JavaScript","HTML / CSS","React","C#   ","MongoDB","NodeJS"]
-    const knowledgeList = ["מנהיגות","פיתוח אנשים","יכולת אלתור","עמידה בתנאי לחץ","עבודה עם אנשים","תכונות וניסיון"]
-    const changeLanguage = useContext(LanguageProvider)
     
     return (
         <RightSide>
             
             <Header>שליטה בעיצוב</Header>
-            <SkillNBar header={header} skills={skills}/>
+            <SkillNBar header={headerHebrew} skills={skillsHebrew}/>
             <Header>שליטה בשפות תוכנה</Header>
-            <SkillNBar header={header} skills={codingSkills}/>
-            <Knowledge knowledgeList={knowledgeList}/>
+            <SkillNBar header={headerHebrew} skills={codingSkillsHebrew}/>
+            <Knowledge knowledgeList={knowledgeListHebrew}/>
         </RightSide>
     )
 }

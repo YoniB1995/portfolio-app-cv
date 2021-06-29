@@ -32,8 +32,8 @@ export default function FirstPageEnglish() {
         <BoxBlack className="slide-in-fwd-center">
             <h1 className="animate_animated animate__backInUp">יוני ביטאו</h1> 
         <h3>מפתח אפליקציות פול-סטאק</h3> 
-            
-            <span><StarIcon><FontAwesomeIcon icon={faCertificate}></FontAwesomeIcon></StarIcon>
+            <span>
+                <StarIcon><FontAwesomeIcon icon={faCertificate}></FontAwesomeIcon></StarIcon>
             <StarIcon><FontAwesomeIcon icon={faCertificate}></FontAwesomeIcon></StarIcon>
             <StarIcon><FontAwesomeIcon icon={faCertificate}></FontAwesomeIcon></StarIcon>
             <StarIcon><FontAwesomeIcon icon={faCertificate}></FontAwesomeIcon></StarIcon>

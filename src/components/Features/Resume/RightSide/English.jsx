@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SkillNBar from '../RightSide/SkillNBar'
 import Knowledge from '../RightSide/Knowledge'
-
+import {header,skills,codingSkills,knowledgeList} from './TypoRightSide'
 
 
 const RightSide = styled.div`
@@ -19,11 +19,6 @@ font-weight:800;
 `
 
 export default function RightResumePage() {
-    const header=["Design Skills","Coding Skills"];
-    const skills =["Web Design","Logo Design","Web Design"]
-    const codingSkills =["JavaScript","HTML / CSS","React","C#   ","MongoDB","NodeJS"]
-const knowledgeList = ["Leadership"," People Development","Improvisation","Pressure Handling","Engaging People","Interpersonal & Other Skills"]
-
     
     return (
         <RightSide>

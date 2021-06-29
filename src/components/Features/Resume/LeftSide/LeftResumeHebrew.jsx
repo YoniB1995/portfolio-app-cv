@@ -1,14 +1,13 @@
-import React , { Component , useState,useContext } from 'react';
+import React , {useContext } from 'react';
 import styled from 'styled-components'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Stages from './Stages'
-import StagesHebrew from './StagesHebrew'
+import Stages from '../Stages'
+import StagesHebrew from '../StagesHebrew'
 import {  } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-import { LanguageProvider} from '../Context/LanguageContext'
+import { LanguageProvider} from '../../../Context/LanguageContext'
 
 
 const LeftSide = styled.div`
