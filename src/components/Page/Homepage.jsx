@@ -1,4 +1,4 @@
-import React , {useState,useMemo} from 'react'
+import React , {useState,useReducer} from 'react'
 import {Header , Body , BlackBox , GreyBox , UserCardDetails , ProfileImg , Copyright , jacobIcon , techIcon} from './HomeCss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
@@ -15,14 +15,26 @@ import DevDetailsHebrew from '../Features/DevDetails/DevDetailsHebrew'
 import {BrowserRouter as Router , Route , Switch } from 'react-router-dom'
 
 
-
 export default function Homepage() {
   const [hebrew,setHebrew] = useState({isTrue:false});
   const backgroundStyle ={ backgroundImage: "url('images/background_Protfolio.jpeg')"}
-  const changeToHebrew = () => {setHebrew({isTrue:true})}
-  const changeToEnglish = () => {setHebrew({isTrue:false})}
+  // const changeToHebrew = () => dispatch({type:'Hebrew'}) ;
+  // const changeToEnglish = () => dispatch({type:'English'})}
   const style ={color:"white"};
-  
+    const [state, dispatch] = useReducer(changeLanguage, {isTrue:false});
+
+  function changeLanguage(state, action) {
+  switch (action.type) {
+    case 'Hebrew':
+      return setHebrew({isTrue:true});
+    case 'English':
+      return setHebrew({isTrue:false});
+    default:
+      throw new Error();
+  }
+
+}
+
   return (
   <>
   <LanguageProvider value={hebrew}>
@@ -50,8 +62,8 @@ export default function Homepage() {
     <GreyBox className="animate__animated animate__zoomInUp">
    <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"/>
    {hebrew.isTrue? <DevDetailsHebrew/> :<DevDetails/>}
-   <div>{hebrew.isTrue? <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>עברית</Button> : <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>Hebrew</Button> }
-        {hebrew.isTrue?<Button variant="contained" color="primary" onClick={changeToEnglish}> אנגלית</Button> : <Button variant="contained" color="primary" onClick={changeToEnglish}> English</Button>}</div> 
+   <div>{hebrew.isTrue? <Button variant="contained" color="primary" style={style} onClick={()=>{dispatch({type:'Hebrew'})}}>עברית</Button> : <Button variant="contained" color="primary" style={style} onClick={()=>{dispatch({type:'Hebrew'})}}>Hebrew</Button> }
+        {hebrew.isTrue?<Button variant="contained" color="primary" onClick={()=>{dispatch({type:'English'})}}> אנגלית</Button> : <Button variant="contained" color="primary" onClick={()=>{dispatch({type:'English'})}}> English</Button>}</div> 
    <Copyright><FontAwesomeIcon icon={faCodepen} /> {hebrew.isTrue? "כל הזכויות שמורות יוני.ב" : "All Rights reserved Yoni_B" }</Copyright>
    </GreyBox>
    </div>
@@ -59,4 +71,4 @@ export default function Homepage() {
   </LanguageProvider>
     </>
   );
-}
+  }
