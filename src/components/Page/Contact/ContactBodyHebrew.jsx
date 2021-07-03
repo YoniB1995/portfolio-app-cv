@@ -42,17 +42,17 @@ export default function ContactBodyHebrew() {
         <Container>
           <Form action="">
               <label htmlFor="">:שם פרטי
-                  <input type="text" placeholder="first name" name="" id="" />
+                  <input type="text" placeholder="שם פרטי" name="" id="" />
               </label>
               <label htmlFor="">:שם משפחה
-                  <input type="text" placeholder="last name" name="" id="" />
+                  <input type="text" placeholder="שם משפחה" name="" id="" />
               </label>
               <label htmlFor="">:אימייל
-                <input type="email" placeholder="email" name="" id="" />
+                <input type="email" placeholder="אימייל" name="" id="" />
               </label>
               <label htmlFor="Textarea">אשמח אם תרשמו את דעתכם על פרוייקט הפרוטפיליו שלי:
               </label>
-              <Textarea placeholder="Type here..." name="Type" id="" cols="30" rows="10"></Textarea>
+              <Textarea placeholder="הקלד כאן..." name="Type" id="" cols="30" rows="10"></Textarea>
               <p>דרגו את חווית המשתמש מהאפליקצייה והנראות שלה!</p>
               <HoverRating/>
               <Button onClick={(()=>{alert("yonatansamfisher@gmail.com אשמח לביקורות בונות")})}>שלח!</Button>

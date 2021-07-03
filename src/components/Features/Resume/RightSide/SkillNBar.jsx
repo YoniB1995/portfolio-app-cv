@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {ProgressBar} from 'react-bootstrap'
+import CountUp from 'react-countup';
 
 const SkillBar = styled.span` 
 width: 250px;
@@ -13,7 +14,7 @@ width: 250px;
 `
 export default function SkillNBar(props) {
     const skills = props.skills; 
-    const now = [90,92,96,98,88,100];
+    const now = [<CountUp end={90} />,92,96,98,88,100];
 
     return (
         <>

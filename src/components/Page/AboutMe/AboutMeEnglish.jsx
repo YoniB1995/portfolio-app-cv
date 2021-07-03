@@ -35,7 +35,6 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 const HeaderTwo = styled.h3`
 color: #09f1de94;
 position: relative;
-right:20%;
 font-size: 30px;
 font-weight: 700;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -145,7 +144,7 @@ export default function AboutMeEnglish() {
     Personable and understanding
     </p>
 
-    const meArr = ["Age","Residence","Address","e-mail","Phone"]
+    const meArr = ["Age","Residence","Address","Email","Phone"]
     const meDetails = ["25","Israel","Hashalavit 6 Hadera","yonatansamfisher@gmail.com","0538276526"]
     const skillType =["Web Design","Team Management","Person Qualifications","Communication"]
     const skillsDesc =[webDesign,teamManagement,personalQualifications,communication]
