@@ -1,20 +1,28 @@
-import React , {useState,useEffect} from 'react'
-import styled from 'styled-components';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodepen  } from '@fortawesome/free-brands-svg-icons';
-import AboutMe from './AboutMe/AboutMe'
-import IconsMenu from '../Features/IconsMenu'
-import { UserProvider } from '../Context/Context'
-import {LanguageProvider} from '../Context/LanguageContext'
-import Resume from '../Features/Resume/Resume'
-import FirstPage from '../Page/FirstPage/FirstPage'
-import DevDetails from '../Features/DevDetails/DevDetails'
-import Contact from './Contact/Contact'
-import Projects from './Projects/Projects'
-import {Button} from '@material-ui/core'
-import DevDetailsHebrew from '../Features/DevDetails/DevDetailsHebrew'
+import styled from 'styled-components'
 
+const techIcon = <a href="https://tech-career-alternative.firebaseapp.com/" type="_blank"><img src="images/INDI_COM.png" alt="tech career logo"  width="180px" height="300px" className="headerImgOne" /> </a> 
+const jacobIcon =<a href="https://www.chapters.indigo.ca/en-ca/?fdtcm=1" type="_blank"><img src="images/טק_קריירה.png" alt="indi com logo" width="180px" height="150px" className="headerImgTwo" style={{borderRadius:"50%",border:"solid 1px black"}} /></a> 
 
+const Header = styled.header`
+position:absolute;
+width:100vw;
+top:0;
+.headerImgOne{
+  position:absolute;
+  left:5%;
+  :hover{
+    opacity:0.5;
+  }
+}
+.headerImgTwo{
+  position:absolute;
+  right:5%;
+  :hover{
+    opacity:0.5;
+  }
+}
+
+`
 
 const Body = styled.div`
 flex-basis: 80%;
@@ -218,53 +226,116 @@ bottom: 5%;
     bottom:1%;
   }
 `
+const Navbar = styled.div`
+position: absolute;
+border-radius: 40px;
+margin: 10px;
+width: 60px;
+top:9%;
+right: 19%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background: #0a0909;
+border: 1px solid black;
 
-export default function BoxReview() {
-  const [isTrue,setIsTrue] = useState({displayMain:true,displayAboutMe:false,displayResume:false,displayContact:false,displayProjects:false,hebrew:false})
-  const [hebrew,setHebrew] = useState({isTrue:false});
-  const newTrue = {
-    displayMain:isTrue,
-    displayAboutMe:isTrue,
-    displayResume:isTrue,
-    displayContact:isTrue,
-    displayProjects:isTrue,
-    changeUser : (value) => {setIsTrue(value)},
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width:100%;
+right:0;
+left:0;
+top:0;
+margin:0;
+padding:0;
+  }
+
+`
+
+const NavbarGif = styled.span`
+font-size: 25px;
+padding: 5px;
+:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    
+
+}
+:hover span{
+      visibility: visible;
+      transition: 0.5s ease-in-out ;
+      opacity:1;
+     background: black;
+     color:white;
   }
   
-    function changeToHebrew(){
-        setHebrew({isTrue:true})
-    }
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+      padding:0;
+      font-size:25px;
+  }
 
-    function changeToEnglish(){
-        setHebrew({isTrue:false})
-    }
+`
+const DivTest = styled.div` 
+position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  span{
+      visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #7e1717;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 15px;
 
-    const style ={color:"white"};
+  position: absolute;
+  bottom:1px;
+  left:15px;
+  }
+  @media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+      padding:0;
+      left:0%;
+      right:0%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      
+      span{
+      visibility: hidden;
+  width: 100px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 15px;
+height:30px;
+  position: absolute;
+  top:20px;
+  left:-10px;
+  }
+     
+  }
 
-  return (
-    <><UserProvider value={newTrue} >
-      <LanguageProvider value={hebrew}>
-    <Body>
-      <BlackBox className="animate__animated animate__zoomInUp">
-      <UserCardDetails > 
-      {newTrue.displayMain.displayMain===true&& <FirstPage/>  } 
-      {newTrue.displayAboutMe.displayAboutMe === true&& <AboutMe/>} 
-      {newTrue.displayResume.displayResume === true && <Resume/>}
-      {newTrue.displayContact.displayContact === true && <Contact/>}
-      {newTrue.displayProjects.displayProjects === true && <Projects/>}
-</UserCardDetails>
-  </BlackBox>   
-    </Body>
-    <IconsMenu/>
-    <GreyBox className="animate__animated animate__zoomInUp">
-   <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"/>
-   {hebrew.isTrue? <DevDetailsHebrew/> :<DevDetails/>}
-   <div>{hebrew.isTrue? <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>עברית</Button> : <Button variant="contained" color="primary" onClick={changeToHebrew} style={style}>Hebrew</Button> }
-        {hebrew.isTrue?<Button variant="contained" color="primary" onClick={changeToEnglish}> אנגלית</Button> : <Button variant="contained" color="primary" onClick={changeToEnglish}> English</Button>}</div> 
-   <Copyright><FontAwesomeIcon icon={faCodepen} /> {hebrew.isTrue? "כל הזכויות שמורות יוני.ב" : "All Rights reserved Yoni_B" }</Copyright>
-  </GreyBox>
-  </LanguageProvider>
-    </UserProvider>
-    </>
-  );
-}
+`
+
+export {Header , Body , BlackBox , GreyBox , UserCardDetails , ProfileImg , Copyright , Navbar , NavbarGif , DivTest ,techIcon , jacobIcon }

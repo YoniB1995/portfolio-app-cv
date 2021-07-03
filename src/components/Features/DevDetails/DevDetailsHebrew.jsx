@@ -74,24 +74,25 @@ font-size:30px;
 
 export default function DevDetails() {
     const LinkedIn =
-    <a href="https://www.linkedin.com/in/yoni-bitew-955b971bb/" target="_blanked">
+    <a href="https://www.linkedin.com/in/yoni-bitew-955b971bb/" target="_blank">
         <FontAwesomeIcon icon={faLinkedinIn} color="white"/></a>
     const FaceBook =
-    <a href="https://www.facebook.com/profile.php?id=100006574396023">
+    <a href="https://www.facebook.com/profile.php?id=100006574396023" target="_blank">
         <FontAwesomeIcon icon={faFacebook} color="white" /></a>
         
     const Github =
-    <a href="https://github.com/YoniB1995">
+    <a href="https://github.com/YoniB1995" target="_blank">
         <FontAwesomeIcon icon={faGithub} color="white" /></a>
 
     return (
         <DevDetailsFont>      
      <Header>יוני ביטאו</Header>
      <p>מפתח אפליקציות פול-סטאק</p>
+     <p>yonatansamfisher@gmail.com</p>
      <FontLinks>{LinkedIn}</FontLinks>
      <FontLinks>{FaceBook} </FontLinks>
      <FontLinks>{Github}</FontLinks>
-     <ButtonCV>להורדת קו''ח לחץ כאן</ButtonCV>
+     <a href="https://www.filemail.com/d/sfzrkxqeloenive" type="_blank"><ButtonCV>להורדת קו''ח לחץ כאן</ButtonCV></a>
         </DevDetailsFont>
     )
 }

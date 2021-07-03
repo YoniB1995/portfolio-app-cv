@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome , faUser , faGraduationCap , faProjectDiagram ,faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {UserConsumer} from '../Context/Context'
+import { faHome , faUser , faGraduationCap , faProjectDiagram ,faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+import {BrowserRouter as Router , Route , Switch , Link} from 'react-router-dom'
 
 
 const Navbar = styled.div`
@@ -117,56 +117,27 @@ height:30px;
 
 `
 
-
 export default function IconsMenu() {
     const colorOcean= "white";
-    
-    const showMain = {displayMain:true};
-    const showAboutMe = {displayAboutMe:true};
-    const showResume = {displayResume:true};
-    const showContact = {displayContact:true};
-    const showProjects = {displayProjects:true};
 
-    const changeUser = useContext(UserConsumer).changeUser;
-
-    const mainPage = () => {
-        changeUser(showMain)
-    }
-
-    const aboutMe = () => {
-        changeUser(showAboutMe)
-    }
-
-    const meResume = () => {
-        changeUser(showResume)
-    }
-
-    const ContactMe = () => {
-        changeUser(showContact)
-    }
-
-    const setProject = () => {
-        changeUser(showProjects)
-    }
-    
     return (
         <Navbar className="animate__animated animate__zoomIn">
-            
-            <NavbarGif><FontAwesomeIcon icon={faHome} onClick={mainPage} color={colorOcean}/><DivTest class="tooltip">
+            <NavbarGif><Link to="/">
+                <FontAwesomeIcon icon={faHome} color={colorOcean}/>
+                </Link>
+                <DivTest class="tooltip">
             <span >Welcome</span>
             </DivTest></NavbarGif>
-            <NavbarGif><FontAwesomeIcon icon={faUser} color={colorOcean} onClick={aboutMe} /><DivTest class="tooltip">
+            <NavbarGif><Link to="/AboutMe"><FontAwesomeIcon icon={faUser} color={colorOcean} /></Link><DivTest class="tooltip">
             <span >About Me</span>
             </DivTest></NavbarGif>
-            <NavbarGif><FontAwesomeIcon icon={faGraduationCap} color={colorOcean} onClick={meResume} /><DivTest class="tooltip">
+            <NavbarGif><Link to="/Resume"><FontAwesomeIcon icon={faGraduationCap} color={colorOcean} /></Link><DivTest class="tooltip">
             <span >Resume</span>
             </DivTest></NavbarGif>
-            <NavbarGif><FontAwesomeIcon icon={faProjectDiagram} color={colorOcean} onClick={setProject}/><DivTest class="tooltip">
+            <NavbarGif><Link to="/Projects"><FontAwesomeIcon icon={faProjectDiagram} color={colorOcean} /></Link><DivTest class="tooltip">
             <span >Projects</span>
-            </DivTest></NavbarGif>
-            
-            
-            <NavbarGif><FontAwesomeIcon icon={faEnvelope} color={colorOcean} onClick={ContactMe}/><DivTest class="tooltip">
+            </DivTest></NavbarGif>         
+            <NavbarGif><Link to="/Contact"><FontAwesomeIcon icon={faEnvelope} color={colorOcean} /></Link><DivTest class="tooltip">
             <span >Contact Me</span>
             </DivTest></NavbarGif>
         </Navbar>

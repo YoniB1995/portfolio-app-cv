@@ -44,6 +44,8 @@ flex-direction: row;
 
 export default function Contact() {
     const colorBlue = "#00e1ff"
+    const githubLinks = ["https://github.com/YoniB1995/workout_Layout_App","https://github.com/YoniB1995/react_Movies_Project/tree/main","https://github.com/YoniB1995/traveling_Website_v2","https://github.com/YoniB1995/userAPI_Project"]
+    const website = ["https://yonib1995.github.io/workout_Layout_App/","https://yonib1995.github.io/react_Movies_Project/","https://yonib1995.github.io/traveling_Website_v2/","https://yonib1995.github.io/userAPI_Project/"]
     return (
         <BoxBlack className="animate__animated animate__backInDown">
         <Container>
@@ -52,10 +54,10 @@ export default function Contact() {
             </Header>
             <Body>
             <CardsFlex>
-            <Card img={images[0]} title={titles[0]} description={description[0]}/>
-            <Card img={images[1]} title={titles[1]} description={description[1]}/>
-            <Card img={images[2]} title={titles[2]} description={description[2]}/>
-            <Card img={images[3]} title={titles[3]} description={description[3]}/>
+            <Card img={images[0]} title={titles[0]} description={description[0]} githubLinks={githubLinks[0]} websiteLink={website[0]}/>
+            <Card img={images[1]} title={titles[1]} description={description[1]} githubLinks={githubLinks[1]} websiteLink={website[1]}/>
+            <Card img={images[2]} title={titles[2]} description={description[2]} githubLinks={githubLinks[2]} websiteLink={website[2]}/>
+            <Card img={images[3]} title={titles[3]} description={description[3]} githubLinks={githubLinks[3]} websiteLink={website[3]} />
             </CardsFlex>
             </Body>
         </Container>

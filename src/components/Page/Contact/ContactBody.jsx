@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import HoverRating from './HoverRating'
 
-
 const Container = styled.div`
 display: flex;
 justify-content: center;
@@ -38,9 +37,19 @@ border-radius: 10px;
 `
 
 export default function ContactBody() {
+    function getEmail(e){
+        e.preventDefault();
+
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+    }
     return (
         <Container>
-          <Form action="">
+          <Form onSubmit={getEmail}>
               <label htmlFor="">First Name:
                   <input type="text" placeholder="first name" name="" id="" />
               </label>
