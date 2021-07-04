@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useState,useRef ,useEffect} from 'react'
 import styled from 'styled-components'
 import HoverRating from './HoverRating'
+import { TextField } from "@material-ui/core";
+import emailjs from "emailjs-com";
 
 
 const Container = styled.div`
@@ -37,26 +39,92 @@ border-radius: 10px;
 }
 `
 
+
+
 export default function ContactBodyHebrew() {
+    const [info, setInfo] = useState({});
+    const Focus = useRef(null);
+    function setInformation(e) {
+      setInfo({ ...info, [e.target.name]: e.target.value });
+    }
+    useEffect(() => {
+      Focus.current.focus();
+    }, []);
+
+    function getEmail(e){
+        e.preventDefault();
+        emailjs
+    .sendForm(
+      "service_bxe7xdx",
+      "template_bdn3v4o",
+      e.target,
+      "user_rptTBZDbXl9AI5Z96I5Rm"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    e.target.reset()
+    }
     return (
         <Container>
-          <Form action="">
-              <label htmlFor="">:שם פרטי
-                  <input type="text" placeholder="first name" name="" id="" />
-              </label>
-              <label htmlFor="">:שם משפחה
-                  <input type="text" placeholder="last name" name="" id="" />
-              </label>
-              <label htmlFor="">:אימייל
-                <input type="email" placeholder="email" name="" id="" />
-              </label>
-              <label htmlFor="Textarea">אשמח אם תרשמו את דעתכם על פרוייקט הפרוטפיליו שלי:
-              </label>
-              <Textarea placeholder="Type here..." name="Type" id="" cols="30" rows="10"></Textarea>
-              <p>דרגו את חווית המשתמש מהאפליקצייה והנראות שלה!</p>
+          <Form onSubmit={getEmail}>
+              <label>
+          <TextField
+            inputRef={Focus}
+            onChange={setInformation}
+            name="firstName"
+            type="text"
+            label="השם הפרטי שלך..."
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+        <label>
+          <TextField
+            name="lastName"
+            onChange={setInformation}
+            type="text"
+            label="שם המשפחה שלך..."
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+        <label>
+          <TextField
+            name="email"
+            onChange={setInformation}
+            type="text"
+            label="אימייל@email.com"
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+
+        <label>
+          <TextField
+            name="Message"
+            onChange={setInformation}
+            id="outlined-multiline-static"
+            cols="30"
+            label="ההודעה שלך נכנסת כאן..."
+            multiline
+            rows={3}
+            variant="outlined"
+          />
+        </label>
+              <p>Rate your experience from the App!</p>
               <HoverRating/>
-              <Button onClick={(()=>{alert("yonatansamfisher@gmail.com אשמח לביקורות בונות")})}>שלח!</Button>
+             <button type="submit">Send!</button>
           </Form>
         </Container>
     )
 }
+
