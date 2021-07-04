@@ -33,8 +33,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 const HeaderTwo = styled.h3`
 color: #09f1de94;
 position: relative;
-
-font-size: 40px;
+left:30%;
+font-size: 30px;
 font-weight: 700;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 @media only screen and (min-width: 414px) and (max-width: 767px),
@@ -133,17 +133,16 @@ export default function AboutMeHebrew() {
    
     return (
         <BoxBlack className="slide-in-fwd-center">
-            <HeaderOne><FontAwesomeIcon icon={faUserAlt}></FontAwesomeIcon> מידע אישי </HeaderOne>
+            <HeaderOne>מידע אישי <FontAwesomeIcon icon={faUserAlt}></FontAwesomeIcon></HeaderOne>
             <MeBox>
-            
-            <div>
-                <Details info={meArr} details={meDetails}/>
-            </div>
             <div>
             <p>נולדתי וגדלתי בחדרה , בגרות מלאה במגמות גאוגרפיה ותושב''ע ( תורה שבעל פה ) . התגייסתי לצבא בשנת 2014 לחטיבה הקרבית כפיר ולאחר מכן שירתתי כמפקד וכקצין קרבי בתפקידי הפיקוד בחטיבה. בתפקיד האחרון שלי הייתי מפקד פלוגת טירונים בגדוד ברדלס וניהלתי למעלה מ120 לוחמים ולוחמות ו20 מפקדים.
                 לאחרונה התחלתי ללמוד פיתוח תוכנה פולסטאק מתוך תשוקה ואהבה למקצוע.
             
             </p></div>
+            <div>
+                <Details info={meArr} details={meDetails}/>
+            </div>
             </MeBox>
 
             <HeaderTwo>תחומי התמחות</HeaderTwo>
