@@ -1,4 +1,4 @@
-import React , {useState,useReducer} from 'react'
+import React , {useState,useReducer,useMemo} from 'react'
 import {Header , Body , BlackBox , GreyBox , UserCardDetails , ProfileImg , Copyright , jacobIcon , techIcon} from './HomeCss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
@@ -18,8 +18,6 @@ import {BrowserRouter as Router , Route , Switch } from 'react-router-dom'
 export default function Homepage() {
   const [hebrew,setHebrew] = useState({isTrue:false});
   const backgroundStyle ={ backgroundImage: "url('images/background_Protfolio.jpeg')"}
-  // const changeToHebrew = () => dispatch({type:'Hebrew'}) ;
-  // const changeToEnglish = () => dispatch({type:'English'})}
   const style ={color:"white"};
     const [state, dispatch] = useReducer(changeLanguage, {isTrue:false});
 
@@ -34,7 +32,9 @@ export default function Homepage() {
   }
 
 }
-
+const changeLang = useMemo(()=>{
+  return hebrew.isTrue? <DevDetailsHebrew/> :<DevDetails/>
+})
   return (
   <>
   <LanguageProvider value={hebrew}>
@@ -61,7 +61,7 @@ export default function Homepage() {
     <IconsMenu/>
     <GreyBox className="animate__animated animate__zoomInUp">
    <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"/>
-   {hebrew.isTrue? <DevDetailsHebrew/> :<DevDetails/>}
+   {changeLang}
    <div>{hebrew.isTrue? <Button variant="contained" color="primary" style={style} onClick={()=>{dispatch({type:'Hebrew'})}}>עברית</Button> : <Button variant="contained" color="primary" style={style} onClick={()=>{dispatch({type:'Hebrew'})}}>Hebrew</Button> }
         {hebrew.isTrue?<Button variant="contained" color="primary" onClick={()=>{dispatch({type:'English'})}}> אנגלית</Button> : <Button variant="contained" color="primary" onClick={()=>{dispatch({type:'English'})}}> English</Button>}</div> 
    <Copyright><FontAwesomeIcon icon={faCodepen} /> {hebrew.isTrue? "כל הזכויות שמורות יוני.ב" : "All Rights reserved Yoni_B" }</Copyright>

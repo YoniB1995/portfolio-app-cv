@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useState,useRef ,useEffect} from 'react'
 import styled from 'styled-components'
 import HoverRating from './HoverRating'
+import { TextField } from "@material-ui/core";
+import emailjs from "emailjs-com";
 
 const Container = styled.div`
 display: flex;
@@ -9,6 +11,7 @@ align-items: center;
 flex-direction: column;
 `
 const Form = styled.form` 
+color:white;
 display: flex;
 justify-content: center;
 flex-direction: column;
@@ -17,6 +20,10 @@ border: 1px solid whitesmoke;
 border-radius:25px;
 box-shadow:5px 5px black;
 width: 200px;
+::placeholder {
+    color: white;
+    opacity: 1; 
+  }
 
 `
 
@@ -37,34 +44,88 @@ border-radius: 10px;
 `
 
 export default function ContactBody() {
+    const [info, setInfo] = useState({});
+    const Focus = useRef(null);
+    function setInformation(e) {
+      setInfo({ ...info, [e.target.name]: e.target.value });
+    }
+    useEffect(() => {
+      Focus.current.focus();
+    }, []);
+
     function getEmail(e){
         e.preventDefault();
-
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+        emailjs
+    .sendForm(
+      "service_bxe7xdx",
+      "template_bdn3v4o",
+      e.target,
+      "user_rptTBZDbXl9AI5Z96I5Rm"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    e.target.reset()
     }
     return (
         <Container>
           <Form onSubmit={getEmail}>
-              <label htmlFor="">First Name:
-                  <input type="text" placeholder="first name" name="" id="" />
-              </label>
-              <label htmlFor="">Last Name:
-                  <input type="text" placeholder="last name" name="" id="" />
-              </label>
-              <label htmlFor="">Email:
-                <input type="email" placeholder="email" name="" id="" />
-              </label>
-              <label htmlFor="Textarea">Type your opinion about the Protfolio project:
-              </label>
-              <Textarea placeholder="Type here..." name="Type" id="" cols="30" rows="10"></Textarea>
+              <label >
+          <TextField
+            inputRef={Focus}
+            onChange={setInformation}
+            name="firstName"
+            type="text"
+            label="Your first name..."
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+        <label>
+          <TextField
+            name="lastName"
+            onChange={setInformation}
+            type="text"
+            label="Your first last name..."
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+        <label>
+          <TextField
+            name="email"
+            onChange={setInformation}
+            type="text"
+            label="Example@email.com"
+            id="outlined-textarea"
+            multiline
+            variant="outlined"
+          />
+        </label>
+
+        <label>
+          <TextField
+            name="Message"
+            onChange={setInformation}
+            id="outlined-multiline-static"
+            cols="30"
+            label="Your Messagee Goes Here..."
+            color="primary"
+            multiline
+            rows={3}
+            variant="outlined"
+          />
+        </label>
               <p>Rate your experience from the App!</p>
               <HoverRating/>
-             <Button onClick={(()=>{alert("yonatansamfisher@gmail.com אשמח לביקורות בונות")})}>Send!</Button>
+             <button type="submit">Send!</button>
           </Form>
         </Container>
     )

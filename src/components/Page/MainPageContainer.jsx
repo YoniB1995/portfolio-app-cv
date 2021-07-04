@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useMemo} from 'react'
 import {Button} from 'react-bootstrap'
 import Homepage from './Homepage'
 import { UserProvider } from '../Context/Context'
@@ -51,11 +51,13 @@ export default function MainPageContainer() {
     
 
     const [data,setData] = useState({})
+
     useEffect(()=>{
         fetch("api/techYoniApi.txt")
         .then(res => res.json())
-        .then(req => setData(req) )
+        .then(req => setData(req))
     },[])
+
     
 
     return (
@@ -81,7 +83,8 @@ export default function MainPageContainer() {
     <IconImages onClick={toPictures}><FontAwesomeIcon icon={faImages} /></IconImages>
     <LetsStart src={"images/mouse-scroll.png"} alt="lets start button" onClick={changeFade} />
     {card&& <ImgCards className="animate__animated animate__fadeInDown">
-    {data.cardDesc.map((desc,i)=> <MediaCard img={data.images[i]} cardType={data.cardDesc[i]} cardHeader={data.dates[i]} />)} </ImgCards> }
+    {data.cardDesc.map((desc,i)=>
+             <MediaCard img={data.images[i]} cardType={data.cardDesc[i]} cardHeader={data.dates[i]} />)}</ImgCards> }
 
     </NewDivBody> 
     <MainPage >
@@ -91,5 +94,5 @@ export default function MainPageContainer() {
     
     </UserProvider>
     
-    )
-}
+    )}
+
