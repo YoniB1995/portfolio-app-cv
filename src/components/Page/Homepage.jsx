@@ -3,7 +3,7 @@ import {Header , Body , BlackBox , GreyBox , UserCardDetails , ProfileImg , Copy
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
 import AboutMe from './AboutMe/AboutMe'
-import IconsMenu from '../Features/IconsMenu'
+import Sidebar from '../Features/Sidebar'
 import {LanguageProvider} from '../Context/LanguageContext'
 import Resume from '../Features/Resume/Resume'
 import FirstPage from './FirstPage/FirstPage'
@@ -58,7 +58,7 @@ const changeLang = useMemo(()=>{
       </UserCardDetails>
     </BlackBox>   
     </Body>
-    <IconsMenu/>
+    <Sidebar/>
     <GreyBox className="animate__animated animate__zoomInUp">
    <ProfileImg src="images/fixedProfile.jpg" width="180px" height="150px"/>
    {changeLang}

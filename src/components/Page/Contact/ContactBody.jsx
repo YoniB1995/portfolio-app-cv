@@ -1,8 +1,10 @@
-import React,{useState,useRef ,useEffect} from 'react'
+import React,{useState,useRef ,useEffect,useContext} from 'react'
+import { UserProvider } from '../../Context/Context';
 import styled from 'styled-components'
 import HoverRating from './HoverRating'
 import { TextField } from "@material-ui/core";
 import emailjs from "emailjs-com";
+import Input from '../../Features/Input/Input';
 
 const Container = styled.div`
 display: flex;
@@ -74,18 +76,19 @@ export default function ContactBody() {
     }
     return (
         <Container>
+          <UserProvider value={{Focus,setInformation}}>
           <Form onSubmit={getEmail}>
               <label >
-          <TextField
-            inputRef={Focus}
-            onChange={setInformation}
-            name="firstName"
-            type="text"
-            label="Your first name..."
-            id="outlined-textarea"
-            multiline
-            variant="outlined"
-          />
+              <TextField
+        inputRef={Focus}
+        onChange={setInformation}
+        name="firstName"
+        type="text"
+        label="Your first name..."
+        id="outlined-textarea"
+        multiline
+        variant="outlined"
+      />
         </label>
         <label>
           <TextField
@@ -127,6 +130,7 @@ export default function ContactBody() {
               <HoverRating/>
              <button type="submit">Send!</button>
           </Form>
+          </UserProvider>
         </Container>
     )
 }

@@ -117,7 +117,7 @@ height:30px;
 
 `
 
-export default function IconsMenu() {
+export default function Sidebar() {
     const colorOcean= "white";
 
     return (

@@ -72,7 +72,6 @@ export default function ContactBodyHebrew() {
     }
     return (
         <Container>
-<<<<<<< HEAD
           <Form onSubmit={getEmail}>
               <label>
           <TextField
@@ -122,22 +121,6 @@ export default function ContactBodyHebrew() {
           />
         </label>
               <p>Rate your experience from the App!</p>
-=======
-          <Form action="">
-              <label htmlFor="">:שם פרטי
-                  <input type="text" placeholder="שם פרטי" name="" id="" />
-              </label>
-              <label htmlFor="">:שם משפחה
-                  <input type="text" placeholder="שם משפחה" name="" id="" />
-              </label>
-              <label htmlFor="">:אימייל
-                <input type="email" placeholder="אימייל" name="" id="" />
-              </label>
-              <label htmlFor="Textarea">אשמח אם תרשמו את דעתכם על פרוייקט הפרוטפיליו שלי:
-              </label>
-              <Textarea placeholder="הקלד כאן..." name="Type" id="" cols="30" rows="10"></Textarea>
-              <p>דרגו את חווית המשתמש מהאפליקצייה והנראות שלה!</p>
->>>>>>> 1f6b29620a751fc5dea8d51a178e9e0f81f90437
               <HoverRating/>
              <button type="submit">Send!</button>
           </Form>

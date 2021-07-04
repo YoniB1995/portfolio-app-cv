@@ -37,16 +37,13 @@ export default function MainPageContainer() {
     setStartBtn(false)
     setFade(false);
     showCards(false);
-    setTimeout(()=>{
-        setDogStyle({display:"flex"});
-    }, 2000)
+    
 
     setTimeout(() => {
-    setDogStyle({display:"none"});
     setCardStyle({display:"none"});
     setNewStyle({display:"none"});
     showBox(true);
-    }, 5000);
+    }, 2000);
     }
     
 

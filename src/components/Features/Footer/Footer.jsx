@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {whatsappIcon,githubIcon,linkedinIcon, facebookIcon} from './FooterIcons'
+import Links from '../Links/Links'
 
 const FooterBody = styled.div` 
 position:absolute;
@@ -30,12 +31,11 @@ export default function Footer() {
     const facebook = <a href="https://www.facebook.com/profile.php?id=100006574396023" target="_blank"> <img src={facebookIcon} alt="facebook_icon"/></a>;
     const linkedin = <a href="https://www.linkedin.com/in/yoni-bitew-955b971bb/" target="_blank"><img src={linkedinIcon} alt="linkedin_icon"/></a>;
     
+    const links = [whatsapp , github , facebook , linkedin]
     return (
         <FooterBody>
-           {whatsapp}
-           {github}
-           {facebook}
-           {linkedin}
+           {links.map((index)=> <Links link={index}/>) }
+           
         </FooterBody>
     )
 }

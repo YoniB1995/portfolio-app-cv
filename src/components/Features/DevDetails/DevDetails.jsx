@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn , faFacebook  , faGithub  } from '@fortawesome/free-brands-svg-icons';
+import Links from '../Links/Links';
 
 const FontLinks = styled.span`
 margin: 5px;
@@ -79,20 +80,19 @@ export default function DevDetails() {
     const FaceBook =
     <a href="https://www.facebook.com/profile.php?id=100006574396023" target="_blank">
         <FontAwesomeIcon icon={faFacebook} color="white" /></a>
-        
     const Github =
     <a href="https://github.com/YoniB1995" target="_blank">
         <FontAwesomeIcon icon={faGithub} color="white" /></a>
+        const downloadLink = <a href="https://www.filemail.com/d/sfzrkxqeloenive" type="_blank"><ButtonCV>Download CV</ButtonCV></a>
+        const links = [ LinkedIn, FaceBook , Github]
 
     return (
         <DevDetailsFont>
      <Header>Yoni Bitew</Header>
      <p>FullStack Developer</p>
      <p>yonatansamfisher@gmail.com</p>
-     <FontLinks>{LinkedIn}</FontLinks>
-     <FontLinks>{FaceBook} </FontLinks>
-     <FontLinks>{Github}</FontLinks>
-     <a href="https://www.filemail.com/d/sfzrkxqeloenive" type="_blank"><ButtonCV>Download CV</ButtonCV></a>
+     {links.map((link)=> <FontLinks><Links link={link}/></FontLinks>)}
+     <Links link={downloadLink}/>
         </DevDetailsFont>
     )
 }
