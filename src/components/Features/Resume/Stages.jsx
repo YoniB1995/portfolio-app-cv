@@ -68,7 +68,7 @@ export default function Stages() {
 				</TimelineSeparator>
 				<TimelineContent>
 				<Paper elevation={3}
-					style={paperstyle}><b>2021 - ?</b><br /> Looking for a job at the Industry , Highly motivated Full-Stack Web Developer.
+					style={paperstyle}><b>2021 - </b><br /> Looking for a job at the Industry , Highly motivated Full-Stack Web Developer.
 				</Paper>
 				</TimelineContent>
 			</TimelineItem>
