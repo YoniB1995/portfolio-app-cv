@@ -25,7 +25,7 @@ text-align:center;
 `
 
 const Header = styled.h1` 
-font-size:25px;
+font-size:30px;
  @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
@@ -40,7 +40,7 @@ export default function Skills(props) {
     const {skillsDesc , skillType , imgGif} = props
     return (
         <>
-            {skillType.map((i,num)=><DivBox><Header>{imgGif[num]} {i}</Header><p>{skillsDesc[num]}</p></DivBox>)}
+            {skillType.map((i,num)=><DivBox><Header>{imgGif[num]}{i}</Header><p>{skillsDesc[num]}</p></DivBox>)}
         </>
     )
 }

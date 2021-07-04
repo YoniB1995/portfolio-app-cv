@@ -38,7 +38,7 @@ export default function Contact() {
     return (
         <Container className="slide-in-fwd-center">
             <Header>
-                {changeLanguage? <h1><FontAwesomeIcon icon={faEnvelope} color={color} /> צור קשר </h1> : <h1>Contact Me <FontAwesomeIcon icon={faEnvelope} color={color} /></h1> }
+                {changeLanguage? <h1>צור קשר <FontAwesomeIcon icon={faEnvelope} color={color} /></h1> : <h1>Contact Me <FontAwesomeIcon icon={faEnvelope} color={color} /></h1> }
             </Header>
             
             <Body>
