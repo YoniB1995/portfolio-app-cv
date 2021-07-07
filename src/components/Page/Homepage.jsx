@@ -12,7 +12,7 @@ import Contact from './Contact/Contact'
 import Projects from './Projects/Projects'
 import {Button} from '@material-ui/core'
 import DevDetailsHebrew from '../Features/DevDetails/DevDetailsHebrew'
-import {BrowserRouter as Router , Route , Switch } from 'react-router-dom'
+import {HashRouter as Router , Route , Switch } from 'react-router-dom'
 
 
 export default function Homepage() {
