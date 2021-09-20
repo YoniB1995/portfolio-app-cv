@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const MainPage = styled.div` 
 display: flex;
 flex-direction: column;
- background-color: #87CEFA;
+ background-color: #f4f4f4;
  flex-direction:column;
  
 @media only screen and (min-width: 414px) and (max-width: 767px),
