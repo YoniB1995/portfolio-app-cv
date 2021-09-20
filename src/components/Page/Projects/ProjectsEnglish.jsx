@@ -3,7 +3,13 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
 import Card from "../Contact/Card";
-import { titlesEnglish, descriptionEnglish, images } from "./TypoProjects";
+import {
+  titlesEnglish,
+  descriptionEnglish,
+  images,
+  githubLinks,
+  website,
+} from "./TypoProjects";
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +23,7 @@ const Header = styled.div`
   font-family: Georgia, "Times New Roman", Times, serif;
 `;
 const Body = styled.div`
-  padding-top: 10rem;
+  padding-top: 31rem;
 
   display: flex;
   justify-content: center;
@@ -54,18 +60,7 @@ const CardCSS = styled.div`
 
 export default function Contact() {
   const colorBlue = "#00e1ff";
-  const githubLinks = [
-    "https://github.com/YoniB1995/workout_Layout_App",
-    "https://github.com/YoniB1995/react_Movies_Project/tree/main",
-    "https://github.com/YoniB1995/traveling_Website_v2",
-    "https://github.com/YoniB1995/userAPI_Project",
-  ];
-  const website = [
-    "https://yonib1995.github.io/workout_Layout_App/",
-    "https://yonib1995.github.io/react_Movies_Project/",
-    "https://yonib1995.github.io/traveling_Website_v2/",
-    "https://yonib1995.github.io/userAPI_Project/",
-  ];
+
   return (
     <BoxBlack className="animate__animated animate__backInDown">
       <Container>

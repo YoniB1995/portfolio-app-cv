@@ -23,7 +23,7 @@ const Header = styled.div`
   font-family: Georgia, "Times New Roman", Times, serif;
 `;
 const Body = styled.div`
-  padding-top: 10rem;
+  padding-top: 30rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -59,7 +59,7 @@ export default function Contact() {
         <Body>
           <Header>
             <h1>
-              My Projects{" "}
+              תיק העבודות שלי{" "}
               <FontAwesomeIcon
                 icon={faProjectDiagram}
                 color={colorBlue}

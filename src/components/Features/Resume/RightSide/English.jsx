@@ -7,6 +7,8 @@ import { header, skills, codingSkills, knowledgeList } from "./TypoRightSide";
 const RightSide = styled.div`
   display: flex;
   flex-basis: 50%;
+  padding-right: 3rem;
+  padding-top: 12rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -20,10 +22,7 @@ const Header = styled.h3`
 export default function RightResumePage() {
   return (
     <RightSide>
-      <br />
-      <br />
-      <br />
-      <Header>Design Skills</Header>
+      <Header>Platform Knowledge</Header>
       <SkillNBar header={header} skills={skills} />
       <Header>Coding Skills</Header>
       <SkillNBar header={header} skills={codingSkills} />

@@ -7,7 +7,7 @@ export default function DivCard(props) {
   const styleBtnOne = { margin: "5px" };
   const styleBtnTwo = { margin: "5px" };
   return (
-    <Card className="card_Design" style={{ marginLeft: "15px" }}>
+    <Card className="card_Design" style={{ marginLeft: "2rem" }}>
       <Card.Img variant="top" src={props.img} />
       <Card.Body>
         <Card.Title>
