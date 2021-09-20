@@ -22,4 +22,19 @@ const images = ["/images/projectCSS.png","/images/moviesProject.png","/images/tr
         "User API Project made for Tech-Career Academy."]
 
 
-         export { images , titles , description , titlesEnglish, descriptionEnglish}
+
+        const githubLinks = [
+    "https://github.com/YoniB1995/workout_Layout_App",
+    "https://github.com/YoniB1995/react_Movies_Project/tree/main",
+    "https://github.com/YoniB1995/traveling_Website_v2",
+    "https://github.com/YoniB1995/userAPI_Project",
+  ];
+
+  const website = [
+    "https://yonib1995.github.io/workout_Layout_App/",
+    "https://yonib1995.github.io/react_Movies_Project/",
+    "https://yonib1995.github.io/traveling_Website_v2/",
+    "https://yonib1995.github.io/userAPI_Project/",
+  ];
+
+         export { images , titles , description , titlesEnglish, descriptionEnglish, githubLinks,website}

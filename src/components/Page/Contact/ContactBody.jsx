@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { UserProvider } from "../../Context/Context";
 import styled from "styled-components";
 import HoverRating from "./HoverRating";
 import { TextField, makeStyles } from "@material-ui/core";
 import emailjs from "emailjs-com";
-import Input from "../../Features/Input/Input";
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -31,22 +30,6 @@ const Form = styled.form`
   ::placeholder {
     color: white;
     opacity: 1;
-  }
-`;
-
-const Textarea = styled.textarea`
-  resize: none;
-  height: 30px;
-  width: 200px;
-`;
-const Button = styled.button`
-  background: #19b6d1;
-  border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-
-  :hover {
-    opacity: 0.5;
   }
 `;
 
