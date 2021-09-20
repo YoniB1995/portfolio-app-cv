@@ -1,0 +1,32 @@
+{
+      "cardDesc": [
+        "היום הראשון של הקורס",
+        "העברת שיעור בזום לסטודנטים על ניהול זמנים",
+        "פרזנטציה על מיקרוסופט",
+        "של הקורס עם ניר עובד מחברת מיקרוסופט MeetUp",
+        "יום התנדבות במתחם הישן של טק קריירה",
+        "השתתפות בפאנל סטודנטים ביום הפתוח של הקורסים הבאים",
+        "העברת שיעור לכיתה useLayoutEffect",
+        "השתתפות בהרצאה של רן בן זיק בטק קריירה"
+      ],
+      "images": [
+        "https://i.imgur.com/f6nX88j.jpg",
+        "https://i.imgur.com/fjkAzTK.png",
+        "https://i.imgur.com/tECrt1e.jpg",
+        "https://i.imgur.com/gIe6IM1.jpg",
+        "https://i.imgur.com/QFV3IcX.jpg",
+        "https://i.imgur.com/sRWmHuL.jpeg" ,
+        "https://i.imgur.com/6sJfrPO.jpg",
+        "https://i.imgur.com/F7jLuQl.jpeg"
+      ],
+      "dates": [
+          "21.12.2020",
+          "16.01.2021",
+          "15.02.2021",
+          "15.02.2021",
+          "10.03.2021",
+          "26.04.2021",
+          "16.06.2021",
+          "01.07.2021"
+        ]
+  }
