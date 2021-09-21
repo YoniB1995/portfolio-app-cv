@@ -3,18 +3,7 @@ import styled from "styled-components";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import Details from "./Details";
 import Skills from "./Skills";
-import {
-  communication,
-  personalQualifications,
-  teamManagement,
-  webDesign,
-  color,
-  imgGif,
-  meArr,
-  meDetails,
-  skillType,
-  skillsDesc,
-} from "./AboutData";
+import { imgGif, meArr, meDetails, skillType, skillsDesc } from "./AboutData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AboutMeEnglish() {
@@ -133,7 +122,7 @@ const FlexSmallBox = styled.div`
 `;
 const BoxBlack = styled.div`
   height: 90vh;
-  padding-top: 10rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

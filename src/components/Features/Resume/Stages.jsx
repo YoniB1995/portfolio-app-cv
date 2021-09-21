@@ -13,7 +13,13 @@ const paperstyle = {
   width: "10rem",
 };
 
-const styleDot = {};
+const styleDot = {
+  marginTop: "1rem",
+};
+
+const styleMargin = {
+  marginRight: "4rem",
+};
 
 export default function Stages() {
   return (
@@ -36,7 +42,7 @@ export default function Stages() {
           <TimelineDot color="primary" style={styleDot} />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>
+        <TimelineContent style={styleMargin}>
           <Paper elevation={3} style={paperstyle}>
             <b>2014-2020</b> <br /> Officer at Combat Regiment "Kfir" and
             "Bardelas".
@@ -58,10 +64,10 @@ export default function Stages() {
         </TimelineContent>
       </TimelineItem>
       <TimelineItem className="timeLine">
-        <TimelineSeparator>
+        <TimelineSeparator style={styleDot}>
           <TimelineDot />
         </TimelineSeparator>
-        <TimelineContent>
+        <TimelineContent style={styleMargin}>
           <Paper elevation={3} style={paperstyle}>
             <b>2021 - ?</b>
             <br /> Looking for a job at the Industry , Highly motivated

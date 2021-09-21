@@ -23,7 +23,7 @@ const Header = styled.div`
   font-family: Georgia, "Times New Roman", Times, serif;
 `;
 const Body = styled.div`
-  padding-top: 31rem;
+  padding-top: 30rem;
 
   display: flex;
   justify-content: center;
@@ -38,8 +38,9 @@ const CardsFlex = styled.div`
   flex-direction: row;
 `;
 const BoxBlack = styled.div`
-  height: 90vh;
   display: flex;
+  padding-top: 5rem;
+
   justify-content: center;
   align-items: center;
   flex-direction: row;

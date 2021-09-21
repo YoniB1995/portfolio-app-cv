@@ -15,7 +15,7 @@ const LeftSide = styled.div`
   flex-direction: column;
   align-items: center;
   flex-basis: 50%;
-  padding-top: 15rem;
+  padding-top: 11rem;
 `;
 const Header = styled.h1``;
 export default function LeftResumeHebrew() {

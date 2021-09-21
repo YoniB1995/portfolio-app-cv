@@ -13,7 +13,7 @@ const LeftSide = styled.div`
   flex-direction: column;
   align-items: center;
   flex-basis: 50%;
-  padding-top: 15rem;
+  padding-top: 10rem;
   @media only screen and (min-width: 414px) and (max-width: 767px),
     (min-width: 412px) and (max-width: 767px),
     (min-width: 390px) and (max-width: 767px),

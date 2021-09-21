@@ -1,14 +1,11 @@
 import React, { useState, useReducer, useMemo } from "react";
 import {
-  Header,
   Body,
   BlackBox,
   GreyBox,
   UserCardDetails,
   ProfileImg,
   Copyright,
-  jacobIcon,
-  techIcon,
 } from "./HomeCss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
@@ -67,8 +64,8 @@ export default function Homepage() {
             <GreyBox className="animate__animated animate__zoomInUp">
               <ProfileImg
                 src="https://i.ibb.co/WcrKmzp/fixed-Profile.jpg"
-                width="180px"
-                height="150px"
+                width="10rem"
+                height="8rem"
               />
               {changeLang}
               <div>

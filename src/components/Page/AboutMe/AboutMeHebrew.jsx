@@ -121,6 +121,7 @@ const FlexSmallBox = styled.div`
   flex-wrap: wrap;
 `;
 const BoxBlack = styled.div`
+  padding-top: 2rem;
   height: 90vh;
   display: flex;
   justify-content: center;

@@ -1,54 +1,8 @@
 import styled from "styled-components";
 
-const techIcon = (
-  <a href="https://tech-career-alternative.firebaseapp.com/" type="_blank">
-    <img
-      src="images/INDI_COM.png"
-      alt="tech career logo"
-      width="180px"
-      height="300px"
-      className="headerImgOne"
-    />{" "}
-  </a>
-);
-const jacobIcon = (
-  <a href="https://www.chapters.indigo.ca/en-ca/?fdtcm=1" type="_blank">
-    <img
-      src="images/טק_קריירה.png"
-      alt="indi com logo"
-      width="180px"
-      height="150px"
-      className="headerImgTwo"
-      style={{ borderRadius: "50%", border: "solid 1px black" }}
-    />
-  </a>
-);
-
-const Header = styled.header`
-  position: absolute;
-  width: 100vw;
-  top: 0;
-  .headerImgOne {
-    position: absolute;
-    left: 5%;
-    :hover {
-      opacity: 0.5;
-    }
-  }
-  .headerImgTwo {
-    position: absolute;
-    right: 5%;
-    :hover {
-      opacity: 0.5;
-    }
-  }
-`;
-
 const Body = styled.div`
-  flex-basis: 80%;
-
-  height: 100vh;
-  width: 100vw;
+  height: 80%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +291,6 @@ const DivTest = styled.div`
 `;
 
 export {
-  Header,
   Body,
   BlackBox,
   GreyBox,
@@ -347,6 +300,4 @@ export {
   Navbar,
   NavbarGif,
   DivTest,
-  techIcon,
-  jacobIcon,
 };

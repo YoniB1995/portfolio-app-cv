@@ -40,6 +40,7 @@ const CardsFlex = styled.div`
 `;
 const BoxBlack = styled.div`
   height: 90vh;
+  padding-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
