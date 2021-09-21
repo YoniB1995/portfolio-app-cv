@@ -23,9 +23,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function Homepage() {
   const [hebrew, setHebrew] = useState({ isTrue: false });
-  const backgroundStyle = {
-    backgroundImage: "url('images/background_Protfolio.jpeg')",
-  };
+
   const style = { color: "white" };
   const [state, dispatch] = useReducer(changeLanguage, { isTrue: false });
 
@@ -46,7 +44,7 @@ export default function Homepage() {
     <>
       <LanguageProvider value={hebrew}>
         <Router>
-          <div style={backgroundStyle}>
+          <div>
             <Body>
               <BlackBox className="animate__animated animate__zoomInUp">
                 <UserCardDetails>
