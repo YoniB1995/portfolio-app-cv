@@ -44,7 +44,7 @@ const images = [ECOMMERCE_PROJECT,HOURS_COMPANY_PROJECT,NETLIX_PROJECT,COVID19_P
 
   const website = [
     "https://buynsell-ecommerce-app.herokuapp.com/",
-    "https://milk-n-honey-store-app.herokuapp.com/",
+    "https://ecommerce-hw-project.herokuapp.com/",
     "https://yonib1995.github.io/netflix-clone-project/",
     "https://covid19-daily-app.herokuapp.com/ ",
     "https://yonib1995.github.io/portfolio-app-cv/",
